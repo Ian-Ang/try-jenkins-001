@@ -2,10 +2,10 @@ apiVersion: v1
 kind: Service
 metadata:
   name: netflix-website-service
-  namespace: Netflix-Website
+  namespace: netflix-nebsite
 spec:
   selector:
-    app: Netflix-Website
+    app: netflix-nebsite
   type: LoadBalancer
   ports:
   - port: 80
