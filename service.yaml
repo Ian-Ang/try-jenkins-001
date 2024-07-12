@@ -5,7 +5,7 @@ metadata:
   namespace: netflix-nebsite
 spec:
   selector:
-    app: netflix-nebsite
+    app: netflix-website
   type: LoadBalancer
   ports:
   - port: 80
