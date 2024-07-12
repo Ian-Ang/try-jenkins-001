@@ -1,1 +1,32 @@
-
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "netflix-Website"
+  namespace: netflix-Website
+  labels:
+    app: "nginx"
+spec:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: netflix-Website
+  template:
+    metadata:
+      labels:
+        app: netflix-Website
+    spec:
+      restartPolicy: Always
+      containers:
+      - name: netflix-Website
+        image: "ianang/web-html-css:latest"
+        resources:
+          limits:
+            cpu: 200m
+            memory: 500Mi
+          requests:
+            cpu: 100m
+            memory: 200Mi
+        ports:
+        - containerPort: 80
