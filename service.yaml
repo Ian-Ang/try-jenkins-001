@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: netflix-website-service
-  namespace: netflix-nebsite
+  namespace: netflix-website
 spec:
   selector:
     app: netflix-website
