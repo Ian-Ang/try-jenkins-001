@@ -6,7 +6,8 @@ WORKDIR /usr/share/nginx/html
 
 # Copy both the HTML and CSS files to the container's working directory
 COPY index.html .
-COPY styles.css ./css/
-
+COPY netflixstyles.css .
+COPY scripts.js .
+COPY styles.css .
 # Expose port 80 to allow outside access to our app
 EXPOSE 80
