@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: "netflix-website"
-  namespace: Netflix-Website
+  namespace: netflix-website
   labels:
     app: "nginx"
 spec:
