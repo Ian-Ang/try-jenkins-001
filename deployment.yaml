@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: "netflix-Website"
+  name: "netflix-website"
   namespace: Netflix-Website
   labels:
     app: "nginx"
@@ -11,15 +11,15 @@ spec:
     type: RollingUpdate
   selector:
     matchLabels:
-      app: netflix-Website
+      app: netflix-website
   template:
     metadata:
       labels:
-        app: netflix-Website
+        app: netflix-website
     spec:
       restartPolicy: Always
       containers:
-      - name: netflix-Website
+      - name: netflix-website
         image: "ianang/web-html-css:latest"
         resources:
           limits:
